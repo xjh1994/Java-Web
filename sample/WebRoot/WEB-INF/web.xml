@@ -16,6 +16,13 @@
 		<servlet-name>ConnPool</servlet-name>
 		<servlet-class>connPool.ConnPool</servlet-class>
 	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>View</servlet-name>
+    <servlet-class>viewimage.View</servlet-class>
+  </servlet>
+
 
 
 	<servlet-mapping>
@@ -26,16 +33,13 @@
 		<servlet-name>ConnPool</servlet-name>
 		<url-pattern>/ConnPool</url-pattern>
 	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>View</servlet-name>
+    <url-pattern>/View</url-pattern>
+  </servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
-
-	<!-- 配置数据库驱动jdbc mysql -->
-	<resource-ref>
-		<description> mysql jdbc configuration </description>
-		<res-ref-name>jdbc/oracleds</res-ref-name>
-		<res-type>javax.sql.DataSource</res-type>
-		<res-auth>Container</res-auth>
-	</resource-ref>
 
 </web-app>
